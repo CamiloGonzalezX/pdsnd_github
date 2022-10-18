@@ -2,9 +2,10 @@
 
 ### Date created
 This project was created on Octobre 18th, 2022.
+New modification made on the same date.
 
 ### Project Title
-Bikeshare data -> That's the title for this project on investigation for bike sharing
+What's the behaviour of bike sharing in the US?
 
 ### Description
 This project allows people to interactively filter data of bikesharing in three different cities in the US so that different insights can be obtained.
