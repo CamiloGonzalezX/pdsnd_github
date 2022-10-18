@@ -14,4 +14,4 @@ This project allows people to interactively filter data of bikesharing in three 
 Bikeshare.py is the main file used. Readme and the other files were alredy uploaded to github from udacity. Raw CSV data is ignored as it won't change while the code might change.
 
 ### Credits
-Thanks to Udacity for the great opportunity of learning <3
+Thanks to Udacity for the great opportunity of learning <3, it's been such a great opportunity to keep growing.
