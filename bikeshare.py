@@ -16,6 +16,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
+    #Creation of the list of applicable cities for the user to filter on.
     possible_cities = ["chicago", 'new york city', 'washington']
     city = str(input('What city would you like to explore?: ')).lower().rstrip().lstrip()
     while city not in possible_cities:
@@ -23,6 +24,7 @@ def get_filters():
         city = str(input('Please, type the name of the city: ')).lower().rstrip().lstrip()
     month = str(input('Please, type the full name of the month you\'d like to explore (I.e. \'January\', If you want to review all months, please type "all": ')).lower().rstrip().lstrip()
     possible_months = ['all', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+    #Loop to make sure user gives a rigth input
     while month not in possible_months:
         print('It seems the month you specified is not written correctly. Check for typos and try again.')
         month = str(input('Please, specify the month (or type \'all\' if you want to see all months: ')).lower().rstrip().lstrip()
