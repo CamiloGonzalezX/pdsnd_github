@@ -16,7 +16,8 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Hello! Let\'s explore some US bikeshare data!. We\'ll ask you to provide some information, this will be interactive and guided.')
+    #Creation of the list of applicable cities for the user to filter on.
     possible_cities = ["chicago", 'new york city', 'washington']
     city = str(input('What city would you like to explore?: ')).lower().rstrip().lstrip()
     while city not in possible_cities:
@@ -24,11 +25,14 @@ def get_filters():
         city = str(input('Please, type the name of the city: ')).lower().rstrip().lstrip()
     month = str(input('Please, type the full name of the month you\'d like to explore (I.e. \'January\', If you want to review all months, please type "all": ')).lower().rstrip().lstrip()
     possible_months = ['all', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+    #Loop to make sure user gives a rigth input
     while month not in possible_months:
         print('It seems the month you specified is not written correctly. Check for typos and try again.')
         month = str(input('Please, specify the month (or type \'all\' if you want to see all months: ')).lower().rstrip().lstrip()
     day = str(input('Please, type the full name of the day of the week you\'d like to explore (i.e: \'Wednesday\', If you want to review all days of the week, please type \'all\': ')).lower().rstrip().lstrip()
+    #Creation of the list of applicable days of the week for the user to filter on.
     possible_days = ['all', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+    #Loop to make sure user gives a right input
     while day not in possible_days:
         print('It seems the day you specified is not written correctly. Check for typos and try again.')
         day = str(input('Please, specify the day, type "all" if you want to check on all week days: ')).lower().rstrip().lstrip()
@@ -97,6 +101,7 @@ def time_stats(df):
 
 
     # Next, lines of code to exctract hours for each record and display statistics
+    # As hour is given en 24h format, next lines of code will convert it in 12 hours mode, to make it easier to analyze.
     try:
         most_common_start_hour = df['Start Time'].dt.hour.mode()[0]
         if most_common_start_hour < 12:
