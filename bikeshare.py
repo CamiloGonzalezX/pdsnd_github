@@ -15,7 +15,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Hello! Let\'s explore some US bikeshare data!. We\'ll ask you to provide some information, this will be interactive and guided.')
     #Creation of the list of applicable cities for the user to filter on.
     possible_cities = ["chicago", 'new york city', 'washington']
     city = str(input('What city would you like to explore?: ')).lower().rstrip().lstrip()
